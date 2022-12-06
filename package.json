@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "watch-tw": "npx tailwindcss -o public/css/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
