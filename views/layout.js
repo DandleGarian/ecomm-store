@@ -4,7 +4,7 @@ module.exports = ({ content }) => {
       <html lang="en">
       <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Shop</title>
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
@@ -15,12 +15,17 @@ module.exports = ({ content }) => {
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
       </head>
 
-      <body class="tw-bg-background-1">
+      <body class="tw-bg-background-1 !tw-m-0">
         <header>
           <nav class="navbar navbar-bottom !tw-fixed tw-bg-background-3 tw-top-0 tw-inset-x-0 tw-shadow-md">
-            <div class="container navbar-container">
-              <div class="tw-flex tw-justify-start">
-                <ul class="tw-flex tw-gap-x-4 tw-p-0">
+            <div class="container navbar-container md-max:!tw-mx-0">
+              <div class="tw-flex tw-justify-center md:tw-justify-start">
+                <div class="tw-block md:tw-hidden tw-p-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="tw-w-full tw-h-auto">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </div>
+                <ul class="tw-hidden md:tw-flex tw-gap-x-4 tw-p-0">
                   <li class="tw-flex tw-items-center">
                     Products
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="tw-w-6 tw-h-6 tw-ml-2">
@@ -38,9 +43,9 @@ module.exports = ({ content }) => {
                   </li>
                 </ul>
               </div>
-              <div class="tw-p-4 tw-flex tw-w-full tw-justify-center">
+              <div class="tw-p-4 tw-flex tw-w-full tw-justify-center tw-max-w-xs">
                 <a href="/">
-                  <img class="tw-w-80" src="/images/logo-header.png" alt="Carpathian logo" />
+                  <img class="tw-w-full tw-h-auto tw-object-cover" src="/images/logo-header.png" alt="Carpathian logo" />
                 </a>
               </div>
               <div class="navbar-item">
@@ -66,7 +71,7 @@ module.exports = ({ content }) => {
         </header>
         ${content}
         <footer class="-tw-mx-sm -tw-mb-sm tw-bg-accent-forest tw-px-lg tw-py-md+">
-          <div class="tw-flex tw-justify-center tw-gap-x-32">
+          <div class="tw-flex md:tw-justify-center tw-justify-start tw-gap-x-32">
             <div class=" tw-text-background-3">
               <h3 class="tw-mb-sm">Products</h3>
               <ul>
@@ -84,11 +89,16 @@ module.exports = ({ content }) => {
                 <li class="tw-mb-2">Contact</li>
               </ul>
             </div>
-            <div class="tw-text-background-3">
+            <div class="tw-text-background-3 tw-max-w-[14rem] tw-hidden md:tw-block">
               <a href="/">
-                <img class="tw-w-56" src="/images/logo.png" alt="Carpathian logo" />
+                <img class="tw-w-full tw-h-auto tw-object-cover" src="/images/logo.png" alt="Carpathian logo" />
               </a>
             </div>
+          </div>
+          <div class="tw-text-background-3 tw-max-w-[22rem] md:tw-hidden tw-mx-auto">
+            <a href="/">
+              <img class="tw-w-full tw-h-auto tw-object-cover" src="/images/logo-header.png" alt="Carpathian logo" />
+            </a>
           </div>
           <div class="tw-text-background-3">
           <h3 class="tw-mb-sm tw-text-center">Connect With Us</h3>
@@ -112,7 +122,7 @@ module.exports = ({ content }) => {
               </li>
             </ul>
           </div>
-          <div class="tw-mt-md+">
+          <div class="tw-mt-md+ tw-hidden md:tw-block">
             <ul class="tw-flex tw-justify-center tw-gap-sm">
               <li>
                 <a class="tw-no-underline !tw-text-base tw-text-neutral-400" href="#">Terms and conditions</a>
@@ -132,6 +142,25 @@ module.exports = ({ content }) => {
             </ul>
           </div>
         </footer>
+        <div class="md:tw-hidden tw-w-full tw-bg-accent-brown tw-px-xs tw-py-3">
+          <ul class="tw-flex">
+            <li>
+              <a class="tw-no-underline !tw-text-base tw-text-neutral-400" href="#">Terms and conditions</a>
+              <span class="tw-pr-1 !tw-text-base tw-text-neutral-400">|</span>
+            </li>
+            <li>
+              <a class="tw-no-underline !tw-text-base tw-text-neutral-400" href="#">Privacy policy</a>
+              <span class="tw-pr-1 !tw-text-base tw-text-neutral-400">|</span>
+            </li>
+            <li>
+              <a class="tw-no-underline !tw-text-base tw-text-neutral-400" href="#">Returns and exchanges</a>
+              <span class="tw-pr-1 !tw-text-base tw-text-neutral-400">|</span>
+            </li>
+            <li>
+              <a class="tw-no-underline !tw-text-base tw-text-neutral-400" href="#">Data protection</a>
+            </li>
+          </ul>
+        </div>
       </body>
     </html>
   `;
