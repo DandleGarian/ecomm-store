@@ -38,6 +38,18 @@ module.exports = {
         '6xl': '12.8rem',
       },
     },
+    screens: {
+      'sm-max': { max: '649px' },
+      sm: '640px',
+      'md-max': { max: '749px' },
+      md: '750px',
+      'lg-max': { max: '989px' },
+      tablet: { min: '750px', max: '989px' },
+      lg: '990px',
+      'xl-max': { max: '1399px' },
+      xl: '1400px',
+      '2xl': '1536px',
+    },
   },
   plugins: [],
 };
